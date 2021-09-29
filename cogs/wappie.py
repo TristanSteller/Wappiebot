@@ -20,8 +20,8 @@ class Wappie(commands.Cog):
     
     @commands.command(pass_context = True)
     async def shame(self,  ctx):
-        serverId = ctx.message.guild.id
-        await ctx.send(str(serverId))
+        channels = ctx.message.guild.text_channels
+        await ctx.send(channels)
 
     @commands.command()
     async def buikpijn(self, ctx):
